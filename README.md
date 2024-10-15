@@ -875,3 +875,21 @@ echo $mahasiswa1->aksesFitur();
 ![alt text](polymorphism2.png)
 
 **5. Abstraction**
+
+o Buat class abstrak Pengguna dengan metode abstrak aksesFitur(). 
+```php
+<?php
+// Definisi Class Pengguna, class induk (abstrak)
+abstract class Pengguna {
+    // Atribut protected, hanya dapat diakses oleh class ini dan turunan 
+    protected $nama;
+
+    // Constructor untuk menginisialisasi atribut
+    public function __construct($nama) {
+        $this->nama = $nama;
+    }
+
+    // Metode aksesFitur yang merupakan metode abstrak
+    abstract function aksesFitur();
+}
+```
