@@ -24,6 +24,7 @@ class Student extends Person {
         return $this->studentID;
     }
 }
+
 // Membuat objek baru dari class Student
 $student1 = new Student ("Ji Rizky Cahyusna", "230987654");
 // Menampilkan name student dengan memanggil metode getName dari class Person
