@@ -237,7 +237,9 @@ echo $mahasiswa1->tampilkanData(); // Menampilkan data mahasiswa yang sudah dipe
 3. Buat objek dari kelas Dosen, dan gunakan metode tampilkanDosen() untuk 
 menampilkan informasi tersebut. 
 
+**Hasil Codingan:** <br> 
 Proyek ini mendemonstrasikan penerapan konsep pemrograman berorientasi objek (OOP) di PHP melalui pembuatan kelas Dosen. Kelas ini menyimpan informasi tentang dosen dan menyediakan metode untuk menampilkan data tersebut.
+
 
 a. Definisi Kelas
 
@@ -1222,6 +1224,7 @@ class Teacher extends Person {
 - Class Teacher juga mewarisi class Person. Atribut tambahan $teacherID digunakan untuk menyimpan NIP (Nomor Induk Pegawai) dosen.
 - Constructor class Teacher menerima parameter $name dan $teacherID. Constructor class induk dipanggil dengan parent::__construct($name).
 - Metode getName() di-override agar menampilkan nama dosen dan NIP-nya.
+
 4. Membuat Objek Baru dari Class Student dan Teacher
 ```php
 // Membuat objek baru dari class Student dan Teacher
@@ -1301,6 +1304,8 @@ echo $teacher1->getName(); // Menampilkan informasi teacher dengan memanggil met
 **3. Encapsulation**
 
 1. Definisi Class Student
+
+o Ubah atribut name dan studentID dalam kelas Student menjadi private. 
 ```php
 <?php
 // Definisi Class Student
@@ -1323,6 +1328,9 @@ Atribut private: Variabel $name dan $studentID dideklarasikan sebagai private, a
 Constructor: Constructor ini menerima dua parameter $name dan $studentID, yang digunakan untuk menginisialisasi atribut $name dan $studentID ketika objek Student dibuat.
 
 3. Metode Getter dan Setter untuk Atribut Name
+
+o Tambahkan metode setter dan getter untuk mengakses dan mengubah nilai 
+atribut name 
 ```php
 // Metode Getter untuk mengambil nilai atribut name
     public function getName() {
@@ -1337,6 +1345,8 @@ Constructor: Constructor ini menerima dua parameter $name dan $studentID, yang d
 - setName(): Metode setter ini digunakan untuk memperbarui nilai $name.
 
 4. Metode Getter dan Setter untuk Atribut StudentID
+o Tambahkan metode setter dan getter untuk mengakses dan mengubah nilai 
+atribut studentID.
 ```php
 // Metode Getter untuk mengambil nilai atribut StudentID
     public function getStudentID() {
@@ -1439,6 +1449,8 @@ echo "StudentID: " . $student1->getStudentID() . "<br>";
 
 **4. Abstraction**
 1. Definisi Kelas Abstrak Course
+
+o Buat kelas abstrak Course dengan metode abstrak getCourseDetails().
 ```php
 <?php
 // Definisi kelas abstrak Course
@@ -1451,6 +1463,9 @@ abstract class Course {
 - Metode Abstrak: getCourseDetails() adalah metode abstrak, yang harus diimplementasikan oleh semua subclass yang mewarisi kelas Course. Kelas abstrak ini memberikan template metode yang harus diisi dengan logika spesifik di setiap subclass.
 
 2. Definisi Kelas OnlineCourse yang Mengimplementasikan Course
+
+o Buat kelas OnlineCourse dan OfflineCourse yang mengimplementasikan 
+getCourseDetails() untuk memberikan detail yang berbeda.
 ```php
 // Kelas OnlineCourse yang mengimplementasikan Course
 class OnlineCourse extends Course {
@@ -1464,6 +1479,9 @@ class OnlineCourse extends Course {
 - getCourseDetails(): Dalam implementasi ini, kursus online diidentifikasi sebagai kursus Bahasa Inggris dengan kode kursus B02 yang tersedia melalui platform Zoom.
 
 3. Definisi Kelas OfflineCourse yang Mengimplementasikan Course
+
+o Buat kelas OnlineCourse dan OfflineCourse yang mengimplementasikan 
+getCourseDetails() untuk memberikan detail yang berbeda.
 ```php
 // Kelas OfflineCourse yang mengimplementasikan Course
 class OfflineCourse extends Course {
@@ -1547,6 +1565,7 @@ membuat kelas turunan JurnalDosen dan JurnalMahasiswa yang masing-masing
 memiliki cara tersendiri untuk mengelola pengajuan jurnal. 
 
 
+**Hasil Codingan:**
 1. Definisi Class Person (Induk)
 ```php
 <?php
