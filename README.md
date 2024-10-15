@@ -48,6 +48,7 @@ Metode adalah fungsi yang didefinisikan dalam sebuah kelas. Metode digunakan unt
 ### Instruksi Kerja
 **1. Membuat Class & Objek**
 
+o Buat class Mahasiswa yang memiliki atribut nama, nim, dan jurusan.
 Cara Membuat kelas, objek, dan metode di PHP
 1. Definisi Kelas (Class):
 
@@ -61,6 +62,8 @@ class Mahasiswa {
     public $nim;
     public $jurusan;
 ```
+o Buat metode tampilkanData() dalam class Mahasiswa. 
+
 2. Membuat Metode:
 
 Metode tampilkanData() digunakan untuk menampilkan data dari atribut mahasiswa dalam bentuk string. Metode ini mengambil nilai dari atribut nama, nim, dan jurusan yang telah diisi sebelumnya.
@@ -72,6 +75,8 @@ Metode tampilkanData() digunakan untuk menampilkan data dari atribut mahasiswa d
     }
 }
 ```
+o Instansiasi objek dari class Mahasiswa dan tampilkan data mahasiswa tersebut. 
+
 3. Instansiasi Objek:
 
 Pada bagian ini, objek $mahasiswa1 dibuat dari kelas Mahasiswa. Setelah objek dibuat, nilai-nilai untuk nama, nim, dan jurusan diisi secara manual.
@@ -94,6 +99,10 @@ echo $mahasiswa1->tampilkanData(); // Menampilkan data mahasiswa
 ![alt text](Clas&objek1..png)
 
 **2. Implementasi Constructor**
+
+o Tambahkan constructor pada kelas Mahasiswa yang akan menginisialisasi 
+atribut nama, nim, dan jurusan. <br>
+o Gunakan constructor ini untuk mengatur nilai awal dari atribut saat objek dibuat.
 
 Cara membuat kelas menggunakan constructor, dan menginstansiasi objek di PHP. Kelas Mahasiswa mewakili informasi seorang mahasiswa, termasuk atribut seperti nama, NIM (Nomor Induk Mahasiswa), dan jurusan. ```__construct($nama, $nim, $jurusan)```:Metode ini digunakan untuk menginisialisasi atribut kelas dengan nilai awal yang diberikan saat objek diinstansiasi.
 ```php
@@ -119,6 +128,10 @@ echo $mahasiswa1->tampilkanData(); // Menampilkan data mahasiswa
 ![alt text](constructor.png)
 
 **3. Membuat Metode Tambahan**
+
+o Buat metode updateJurusan() dalam kelas Mahasiswa yang memungkinkan 
+perubahan jurusan. <br>
+o Gunakan metode ini untuk mengubah jurusan dari objek yang sudah dibuat.
 
 Metode tambahan yaitu updateJurusan() digunakan untuk memperbarui nilai dari atribut jurusan dengan jurusan baru yang diberikan sebagai parameter.
 ```php
@@ -191,6 +204,8 @@ Metode ini menampilkan informasi lengkap mengenai mahasiswa dalam bentuk string.
 ```
 4. Metode update dan setter
 
+o Ubah nilai atribut nim dari objek Mahasiswa menggunakan metode setter. 
+
 updateJurusan($jurusan_baru): Mengubah jurusan mahasiswa.
 setNIM($nim_baru): Mengubah NIM mahasiswa.
 ```php
@@ -207,6 +222,9 @@ setNIM($nim_baru): Mengubah NIM mahasiswa.
 }
 ```
 5. Instansiasi Objek dan Akses Metode
+
+o Tampilkan data mahasiswa yang sudah diperbarui dengan memanggil metode 
+tampilkanData(). 
 
 Objek Mahasiswa dibuat dan data awal ditampilkan. Setelah itu, metode update dan setter digunakan untuk memperbarui jurusan dan NIM.
 ```php
@@ -241,7 +259,7 @@ menampilkan informasi tersebut.
 Proyek ini mendemonstrasikan penerapan konsep pemrograman berorientasi objek (OOP) di PHP melalui pembuatan kelas Dosen. Kelas ini menyimpan informasi tentang dosen dan menyediakan metode untuk menampilkan data tersebut.
 
 
-a. Definisi Kelas
+1. Definisi Kelas
 
 Kelas Dosen didefinisikan menggunakan kata kunci class. Kelas ini bertanggung jawab untuk menyimpan dan mengelola informasi terkait dosen, seperti nama, NIP, dan mata kuliah.
 ```php
