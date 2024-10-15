@@ -85,7 +85,7 @@ $mahasiswa1->jurusan = "Sistem Informasi";
 ```
 4. Mengakses Metode:
 
-Menggunakan objek $mahasiswa1, kita memanggil metode tampilkanData() untuk menampilkan data mahasiswa yang telah diisi sebelumnya.
+Menggunakan objek $mahasiswa1, memanggil metode tampilkanData() untuk menampilkan data mahasiswa yang telah diisi sebelumnya.
 ```php
 echo $mahasiswa1->tampilkanData(); // Menampilkan data mahasiswa
 ?>
