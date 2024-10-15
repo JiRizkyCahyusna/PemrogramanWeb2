@@ -27,9 +27,10 @@ class Student {
         $this->studentID = $studentID;
     }
 }
+// Membuat objek baru dari class Student
 $student1 = new student("Ji Rizky Cahyusna", "230102063", "Komputer dan Bisnis");
 // Tampilkan data student awal
-echo "Data Student Awal:<br>";
+echo "<b>Data Student Awal:</b><br>";
 echo "Name: " . $student1->getName() . "<br>"; 
 echo "StudentID: " . $student1->getStudentID() . "<br>"; 
 
@@ -37,7 +38,7 @@ echo "StudentID: " . $student1->getStudentID() . "<br>";
 $student1->setName("Ibnu Zaki");
 $student1->setStudentID("240304011");
 // Tampilkan data student yang sudah diperbarui
-echo "<br>Data Student Setelah Pembaruan:<br>";
+echo "<b><br>Data Student Setelah Pembaruan:</b><br>";
 echo "Name: " . $student1->getName() . "<br>"; 
 echo "StudentID: " . $student1->getStudentID() . "<br>"; 
 ?>

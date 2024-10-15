@@ -97,7 +97,7 @@ class JurnalDosen extends Jurnal {
 
     // Implementasi metode kelolaJurnal khusus untuk dosen
     public function getJurnal() {
-        return "Jurnal dosen dengan judul '$this->judul' sedang dikelola oleh dosen atas nama $this->dosen.";
+        return "Jurnal dosen berjudul '$this->judul' sedang dikelola oleh dosen bernama $this->dosen.";
     }
 }
 
@@ -112,7 +112,7 @@ class JurnalMahasiswa extends Jurnal {
 
     // Implementasi metode kelolaJurnal khusus untuk mahasiswa
     public function getJurnal() {
-        return "Jurnal mahasiswa dengan judul '$this->judul' sedang dikelola oleh mahasiswa atas nama $this->mahasiswa.";
+        return "Jurnal mahasiswa berjudul '$this->judul' sedang dikerjakan oleh mahasiswa bernama $this->mahasiswa.";
     }
 }
 
@@ -124,13 +124,13 @@ $mahasiswa1 = new Mahasiswa("Ji Rizky Cahyusna", "230102063", "Teknik Informatik
 echo "Nama: " . $dosen1->getName() . "<br>";
 echo "Peran: " . $dosen1->getRole() . "<br>";
 echo "Mata Kuliah: " . $dosen1->getMataKuliah() . "<br>";
-echo "NIDN: " . $dosen1->getNidn() . "<br>";
+echo "NIDN: " . $dosen1->getNidn() . "<br><br>";
 
 // Menampilkan informasi mahasiswa
 echo "Nama: " . $mahasiswa1->getName() . "<br>";
 echo "Peran: " . $mahasiswa1->getRole() . "<br>";
 echo "NIM: " . $mahasiswa1->getNim() . "<br>";
-echo "Jurusan: " . $mahasiswa1->getJurusan() . "<br>";
+echo "Jurusan: " . $mahasiswa1->getJurusan() . "<br><br>";
 
 // Membuat jurnal dosen dan jurnal mahasiswa
 $jurnalDosen = new JurnalDosen("Pengaruh Teknologi terhadap Pendidikan", $dosen1->getName());
