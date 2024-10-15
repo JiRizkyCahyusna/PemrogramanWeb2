@@ -27,13 +27,13 @@ class Mahasiswa {
 $mahasiswa1 = new Mahasiswa("Ji Rizky Cahyusna", "109876543", "Sistem Informasi");
 
 // Tampilkan data mahasiswa awal
-echo "Data Mahasiswa Awal:<br>";
+echo "<b>Data Mahasiswa Awal:</b><br>";
 echo $mahasiswa1->tampilkanData() . "<br>"; // Menampilkan data mahasiswa awal yang belum diperbarui
 
 // Mengubah jurusan menggunakan metode updateJurusan
 $mahasiswa1->updateJurusan("Teknik Informatika");
 
 // Tampilkan data mahasiswa yang sudah diperbarui
-echo "<br>Data Mahasiswa Setelah Pembaruan:<br>";
+echo "<b><br>Data Mahasiswa Setelah Pembaruan:</b><br>";
 echo $mahasiswa1->tampilkanData(); // Menampilkan data mahasiswa yang sudah diperbarui
 ?>

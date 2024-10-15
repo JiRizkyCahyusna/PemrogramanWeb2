@@ -13,7 +13,7 @@ class Person {
 }
 // Definisi Class Student, subclass yang mewarisi dari class Person
 class Student extends Person {
-    private $studentID; // Atribut private, hanya dapat diakses dalam class Student
+    public $studentID; // Atribut private, hanya dapat diakses dalam class Student
     // Constructor class Student, memanggil constructor dari class Person
     public function __construct($name, $studentID){
         parent::__construct($name); 

@@ -37,9 +37,10 @@ class Mahasiswa {
         $this->jurusan = $jurusan;
     }
 }
+// Membuat objek Mahasiswa baru dengan nama, nim, jurusan
 $mahasiswa1 = new Mahasiswa("Ji Rizky Cahyusna", "230102063", "Komputer dan Bisnis");
 // Tampilkan data mahasiswa awal
-echo "Data Mahasiswa Awal:<br>";
+echo "<b>Data Mahasiswa Awal:</b><br>";
 echo "Nama: " . $mahasiswa1->getNama() . "<br>"; 
 echo "Nim: " . $mahasiswa1->getNim() . "<br>"; 
 echo "Jurusan: " . $mahasiswa1->getJurusan() . "<br>"; 
@@ -49,7 +50,7 @@ $mahasiswa1->setNama("Ibnu Zaki");
 $mahasiswa1->setNIM("240304011");
 $mahasiswa1->setJurusan("Rekayasa Elektronika dan Mekatronika");
 // Tampilkan data mahasiswa yang sudah diperbarui
-echo "<br>Data Mahasiswa Setelah Pembaruan:<br>";
+echo "<b><br>Data Mahasiswa Setelah Pembaruan:</b><br>";
 echo "Nama: " . $mahasiswa1->getNama() . "<br>"; 
 echo "Nim: " . $mahasiswa1->getNim() . "<br>"; 
 echo "Jurusan: " . $mahasiswa1->getJurusan() . "<br>"; 
