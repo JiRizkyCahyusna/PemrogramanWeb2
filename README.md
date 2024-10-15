@@ -876,6 +876,8 @@ echo $mahasiswa1->aksesFitur();
 
 **5. Abstraction**
 
+1. Definisi Class Pengguna (Class Abstrak)
+
 o Buat class abstrak Pengguna dengan metode abstrak aksesFitur(). 
 ```php
 <?php
@@ -893,3 +895,14 @@ abstract class Pengguna {
     abstract function aksesFitur();
 }
 ```
+- Class Pengguna adalah class abstrak, yang artinya tidak dapat diinstansiasi langsung menjadi objek.
+- Atribut $nama bersifat protected, sehingga hanya bisa diakses oleh class ini dan class yang mewarisinya.
+- Constructor menerima satu parameter $nama, yang digunakan untuk menginisialisasi atribut $nama.
+- Terdapat metode abstrak aksesFitur(), yang harus diimplementasikan oleh setiap class turunan. Ini memberikan fleksibilitas bagi subclass untuk memberikan implementasi spesifik terkait fitur yang mereka miliki.
+
+2. Definisi Class Dosen (Subclass dari Pengguna)
+o Implementasikan class Mahasiswa dan Dosen yang mengimplementasikan metode abstrak tersebut.
+Class Dosen adalah subclass yang mewarisi dari class Pengguna.
+Atribut tambahan $mataKuliah digunakan untuk menyimpan mata kuliah yang diampu oleh dosen. Ini adalah atribut private, sehingga hanya bisa diakses dari dalam class Dosen.
+Constructor class Dosen menerima dua parameter ($nama dan $mataKuliah) dan memanggil constructor dari class induk menggunakan parent::__construct($nama) untuk menginisialisasi $nama.
+Metode aksesFitur() di-override untuk memberikan implementasi spesifik bagi dosen, yaitu menunjukkan bahwa dosen dapat mengelola mata kuliah dan memiliki akses untuk memberikan tugas.
