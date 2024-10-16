@@ -1587,6 +1587,13 @@ memiliki cara tersendiri untuk mengelola pengajuan jurnal.
 
 
 **Hasil Codingan:**
+
+-Implementasikan kelas Person sebagai induk dari Dosen dan Mahasiswa. 
+
+-Terapkan Polymorphism dengan membuat metode getRole() di kelas Person dan 
+override metode ini di kelas Dosen dan Mahasiswa untuk menampilkan peran yang 
+berbeda. 
+
 1. Definisi Class Person (Induk)
 ```php
 <?php
@@ -1613,6 +1620,11 @@ class Person {
 - Konstruktor __construct($name): Menginisialisasi atribut name ketika objek dari kelas ini dibuat.
 Metode getName(): Mengembalikan nilai dari atribut name.
 - Metode getRole(): Menyediakan nilai default "Person", yang bisa di-override oleh kelas turunan untuk menyesuaikan dengan peran yang lebih spesifik.
+
+-Gunakan konsep Inheritance untuk membuat hierarki kelas yang memungkinkan Dosen dan Mahasiswa memiliki atribut dan metode yang sesuai dengan perannya. 
+
+-Gunakan Encapsulation untuk melindungi atribut nidn di kelas Dosen dan nim di 
+kelas Mahasiswa.
 
 2. Definisi Class Dosen (Class turunan dari Person)
 ```php
@@ -1650,6 +1662,11 @@ class Dosen extends Person {
 - Metode getRole(): Mengembalikan "Dosen" untuk mengidentifikasi peran objek ini.
 - Metode getMataKuliah() dan getNidn(): Mengembalikan informasi terkait mata kuliah yang diajarkan dan NIDN dosen.
 
+-Gunakan konsep Inheritance untuk membuat hierarki kelas yang memungkinkan Dosen dan Mahasiswa memiliki atribut dan metode yang sesuai dengan perannya. 
+
+-Gunakan Encapsulation untuk melindungi atribut nidn di kelas Dosen dan nim di 
+kelas Mahasiswa.
+
 3. Definisi Class Mahasiswa (Class turunan dari Person)
 ```php
 // Definisi Class Mahasiswa, subclass yang mewarisi dari class Person
@@ -1686,6 +1703,10 @@ class Mahasiswa extends Person {
 - Metode getRole(): Mengembalikan "Mahasiswa".
 - Metode getNim() dan getJurusan(): Mengembalikan NIM dan jurusan mahasiswa.
 
+-Buat kelas abstrak Jurnal dan implementasikan konsep Abstraction dengan 
+membuat kelas turunan JurnalDosen dan JurnalMahasiswa yang masing-masing 
+memiliki cara tersendiri untuk mengelola pengajuan jurnal. 
+
 4. Definisi Kelas Abstrak Jurnal
 ```php
 // Definisi kelas abstrak Jurnal
@@ -1704,6 +1725,10 @@ abstract class Jurnal {
 - Atribut protected $judul: Memungkinkan akses oleh subclass.
 - Konstruktor __construct($judul): Menginisialisasi atribut judul.
 - Metode abstrak getJurnal(): Harus diimplementasikan oleh kelas turunan, yang menentukan bagaimana jurnal dikelola.
+
+-Buat kelas abstrak Jurnal dan implementasikan konsep Abstraction dengan 
+membuat kelas turunan JurnalDosen dan JurnalMahasiswa yang masing-masing 
+memiliki cara tersendiri untuk mengelola pengajuan jurnal. 
 
 5. Kelas JurnalDosen dan JurnalMahasiswa
 ```php
@@ -1761,6 +1786,7 @@ echo "Jurusan: " . $mahasiswa1->getJurusan() . "<br><br>";
 ```
 - Membuat objek dosen1 dan mahasiswa1: Menggunakan konstruktor masing-masing kelas untuk menginisialisasi objek.
 - Menampilkan informasi: Menggunakan metode getName(), getRole(), getMataKuliah(), getNidn(), getNim(), dan getJurusan() untuk mendapatkan informasi dari objek yang telah dibuat.
+
 
 7. Membuat Jurnal dan Menampilkan Informasi
 ```php
