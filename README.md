@@ -1569,6 +1569,8 @@ echo $offlineCourse->getCourseDetails(). "";
 **Output yang dihasilkan:**
 ![alt text](abstraction3.png)
 
+
+
 ## Tugas 1 Jobsheet 3
 Buat proyek PHP dengan studi kasus sebagai berikut: <br>
 - Implementasikan kelas Person sebagai induk dari Dosen dan Mahasiswa. 
