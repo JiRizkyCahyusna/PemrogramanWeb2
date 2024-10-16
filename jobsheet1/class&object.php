@@ -11,7 +11,7 @@ class Mahasiswa {
         return "Mahasiswa atas nama $this->nama, dengan NIM $this->nim dari jurusan $this->jurusan.";
     }
 }
-// Membuat objek Mahasiswa
+// Membuat objek Mahasiswaa
 $mahasiswa1 = new Mahasiswa();
 // Mengisi nilai atribut
 $mahasiswa1->nama = "Ji Rizky Cahyusna";
